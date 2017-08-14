@@ -17,8 +17,8 @@
 					 	<p>第{{index + 1}}楼</p>
 					 	<p class="content" v-text='item.content'></p>
 					 	<p>
-					 		<span v-text="item.user_name"></span>
-					 		<span>{{item.add_time | datafmt('YYYY-MM-DD : HH-mm-ss')}}</span>
+					 		<span class="userName" v-text="item.user_name"></span>
+					 		<span class="addTime">{{item.add_time | datafmt('YYYY-MM-DD : HH-mm-ss')}}</span>
 					 	</p>
 					 </li>
 				</ul>
@@ -51,6 +51,7 @@
 					 	response.body.content = this.postcontent;
 					 	Toast(response.body.message);
 					 	this.postcontent = '';
+					 	this.getcomment();
 					 }) 
 				},
 				getcomment:function(pageindex){
@@ -87,6 +88,18 @@
 		#list .content{
 			font-size: 20px;
 			color: #000;
-			line-height: 30px;
+			line-height: 40px;	
+		}
+		#list .userName,
+		#list .addTime{
+			display: inline-block;
+			width: 49.5%;
+			box-sizing: border-box;
+		}
+		#list .userName{
+			text-align: left;
+		}
+		#list .addTime{
+			text-align: right;
 		}
 	</style>

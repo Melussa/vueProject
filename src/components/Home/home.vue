@@ -53,7 +53,8 @@
 </template>
 
 <script>
-	import {Toast} from 'mint-ui'; 
+	import {Toast} from 'mint-ui';
+	import common from '../../kits/common.js' 
 	export default{
 		data(){
 			return {
@@ -65,7 +66,7 @@
 		},
 		methods:{
 			getImg:function(){
-				var url = 'http://www.lovegf.cn:8899/api/getlunbo';
+				var url = common.aipdomain + '/api/getlunbo';
 				this.$http.get(url).then(function(response){
 					if(response.body.status != 0){
 						Toast(response.body.message);

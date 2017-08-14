@@ -8,6 +8,7 @@
 	</div>
  </template>
 <script>
+	import common from '../../kits/common.js'
 	export default{
 		data(){
 			return {
@@ -23,7 +24,7 @@
 		methods:{
 			getNew:function(){
 				alert(1);
-				var url = 'http://www.lovegf.cn:8899/api/getnew/' + this.id;
+				var url = common.aipdomain + '/api/getnew/' + this.id;
 				this.$http.get(url).then(function(response){
 					if(response.body.status !== 0){
 						Toast(response.body.message);

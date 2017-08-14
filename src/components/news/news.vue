@@ -21,6 +21,7 @@
 
 <script>
 	import {Toast} from 'mint-ui';
+	import common from '../../kits/common.js';
 	export default{
 		data(){
 			return {
@@ -33,7 +34,7 @@
 		methods:{
 			//獲取API中的新聞資訊
 			getList(){
-				var url = 'http://www.lovegf.cn:8899/api/getnewslist';
+				var url = common.aipdomain + '/api/getnewslist';
 				this.$http.get(url).then(function(response){
 					//获取相应报文的数据
 					if(response.body.status !== 0){

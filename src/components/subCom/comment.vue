@@ -49,7 +49,10 @@
 					 		return;
 					 	}
 					 	response.body.content = this.postcontent;
-					 	Toast(response.body.message);
+					 	Toast({
+					 		message:response.body.message,
+					 		duration:700
+					 	});
 					 	this.postcontent = '';
 					 	this.getcomment();
 					 }) 

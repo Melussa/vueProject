@@ -66,14 +66,14 @@
 		font-size: 14px;
 		margin-top: 1.5em;
 	}
-	.ft sapn{
-		display: block;
-		width: 50%;
+	.ft span{
+		display: inline-block;
+		width: 49.5%;
 	}
-	.ft sapn:nth-child(1){
+	.ft span:nth-child(1){
 		text-align: left;
 	}
-	.ft sapn:nth-child(2){
-		text-align: right;
+	.ft span:nth-child(2){
+		text-align: left;
 	}
 </style>

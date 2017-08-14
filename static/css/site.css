@@ -2,7 +2,7 @@
 * @Author: melissa
 * @Date:   2017-08-12 16:04:56
 * @Last Modified by:   melissa
-* @Last Modified time: 2017-08-14 09:28:39
+* @Last Modified time: 2017-08-14 19:10:21
 */
 body{
 	background-color: #fff;
@@ -13,4 +13,8 @@ body{
 .marginTop{
 	margin-top: 40px;
 	margin-bottom: 50px;
+}
+/* newsInfo里面的新闻内容的样式 */
+#content p {
+		color: #000 ;
 }

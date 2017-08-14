@@ -84,6 +84,11 @@ Vue.filter('datafmt',function(input,tmfstring){
 	//使用momentJS日期格式化库实现日期格式化功能
 	return moment(input).format(tmfstring);
 })
+
+//09 将公共域名引入
+import common from './kits/common.js'
+Vue.prototype.$common = common;
+
 new Vue({
     el:'#App',
 

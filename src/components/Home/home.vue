@@ -41,7 +41,7 @@
 		            </router-link>
 		        </li>
 		       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-		       		<router-link to="callMe">
+		       		<router-link to="/callMe">
 		               <span class="mui-icon mui-icon-phone"></span>
 		               <div class="mui-media-body">联系我们</div>
 		            </router-link>
@@ -54,7 +54,7 @@
 
 <script>
 	import {Toast} from 'mint-ui';
-	import common from '../../kits/common.js' 
+	// import common from '../../kits/common.js' 
 	export default{
 		data(){
 			return {
@@ -66,7 +66,7 @@
 		},
 		methods:{
 			getImg:function(){
-				var url = common.aipdomain + '/api/getlunbo';
+				var url = this.$common.aipdomain + '/api/getlunbo';
 				this.$http.get(url).then(function(response){
 					if(response.body.status != 0){
 						Toast(response.body.message);

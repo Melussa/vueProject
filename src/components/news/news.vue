@@ -3,7 +3,7 @@
 		<!-- 实现新闻资讯列表 -->
 		<ul class="mui-table-view">
 			<li v-for="(item,index) in list" :key="index" class="mui-table-view-cell mui-media">
-				<router-link v-bind = "{to:'/news/newsInfo/' + item.id}" >
+				<router-link v-bind = "{to:'/newsInfo/' + item.id}" >
 					<img class="mui-media-object mui-pull-left" :src="item.img_url">
 					<div class="mui-media-body">
 						<p v-text="item.title" class="title"></p>
@@ -21,7 +21,7 @@
 
 <script>
 	import {Toast} from 'mint-ui';
-	import common from '../../kits/common.js';
+	// import common from '../../kits/common.js';
 	export default{
 		data(){
 			return {
@@ -34,7 +34,7 @@
 		methods:{
 			//獲取API中的新聞資訊
 			getList(){
-				var url = common.aipdomain + '/api/getnewslist';
+				var url = this.$common.aipdomain + '/api/getnewslist';
 				this.$http.get(url).then(function(response){
 					//获取相应报文的数据
 					if(response.body.status !== 0){

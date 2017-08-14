@@ -3,7 +3,7 @@
 		<!-- 实现新闻资讯列表 -->
 		<ul class="mui-table-view">
 			<li v-for="(item,index) in list" :key="index" class="mui-table-view-cell mui-media">
-				<a href="javascript:;">
+				<router-link v-bind = "{to:'/news/newsInfo/' + item.id}" >
 					<img class="mui-media-object mui-pull-left" :src="item.img_url">
 					<div class="mui-media-body">
 						<p v-text="item.title" class="title"></p>
@@ -13,7 +13,7 @@
 						<span>发布时间{{item.add_time | datafmt('YYYY-MM-DD HH:mm:ss')}}</span>
 						<span>点击数：{{item.click}}</span>
 					</div>
-				</a>
+				</router-link>
 			</li>
 		</ul>
 	</div>

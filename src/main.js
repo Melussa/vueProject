@@ -19,6 +19,7 @@ import shoCar from './components/shoPro/shoCar.vue';
 import member from './components/Member/member.vue';
 import search from './components/Search/search.vue';
 import news from './components/news/news.vue';
+import newsInfo from './components/news/newsInfo.vue';
 
 //03 定义路由规则
 var router = new vueRouter({
@@ -26,27 +27,31 @@ var router = new vueRouter({
 	routes:[
 		{
 			path:'/',
-			redirect:'/home'
+			redirect:'/home'//默认显示首页
 		},
 		{
 			path:'/home',
-			component:home
+			component:home//首页
 		},
 		{
 			path:'/shoCar',
-			component:shoCar
+			component:shoCar//购物车
 		},
 		{
 			path:'/member',
-			component:member
+			component:member//会员
 		},
 		{
 			path:'/search',
-			component:search
+			component:search//搜索
 		},
 		{
 			path:'/news',
-			component:news
+			component:news//新闻列表
+		},
+		{
+			path:'/newsInfo/:id',
+			component:newsInfo//新闻详情页面
 		}
 		
 	]

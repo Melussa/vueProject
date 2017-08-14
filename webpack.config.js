@@ -27,21 +27,12 @@ module.exports = {
                 test:/\.(png|jpg|gif|ttf)$/,
                 loader:'url-loader?limit=10000&name=images/[hash:8].[name].[ext]'//表示图片大小小于20k为临界值，大于20k的图片不被打包
             },
-            // {
-            //     test:/\.js$/,//将js文件中的es6语法转成es5语法
-            //     loader:'babel-loader',//表示图片大小小于20k为临界值，大于20k的图片不被打包
-            //     exclude:/node_modules/
-            // },
             {
                 test:/\.vue$/,//解析.vue组件页面
                 loader:'vue-loader'
             }
         ]
     },
-    // babel:{
-    //     presets:['es2015'], //配置将es6语法转换成es5语法
-    //     plugins:['transform-runtime']
-    // },
     plugins:[
         new htmlWP({
             title: '首页',  //生成的页面标题
